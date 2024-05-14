@@ -22,3 +22,91 @@ Our MEA is proposed to aggregate the image embedding with corresponding mask, so
 pip install -r requirements.txt
 ```
 Then download [SAM checkpoint](https://drive.google.com/file/d/1MuqYRQKIZb4YPtEraK8zTKKpp-dUQIR9/view), and put it at .work_dir/SAM/
+
+## 👉 Usage
+1. Prepare your own train dataset and refer to the samples in `M-SAM/demo` to replace them according to your specific scenario. The target file structures should be like the following:
+> ```
+> data/train
+>       ├── adrenal
+>       │ ├── ct_WORD
+>       │ │ ├── imagesTr
+>       │ │ │ ├── word_0025.nii.gz
+>       │ │ │ ├── ...
+>       │ │ ├── labelsTr
+>       │ │ │ ├── word_0025.nii.gz
+>       │ │ │ ├── ...
+>       ├── liver
+>       │ ├── ct_WORD
+>       │ │ ├── imagesTr
+>       │ │ │ ├── word_0025.nii.gz
+>       │ │ │ ├── ...
+>       │ │ ├── labelsTr
+>       │ │ │ ├── word_0025.nii.gz
+>       │ │ │ ├── ...
+>       ├── ...
+> ```
+2. Start Training!
+```bash
+cd ./M-SAM
+python train_msam.py
+```
+This will start the training process of the M-SAM model on your prepared data.
+The key options are listed below:
+
+- task_name: task name
+- checkpoint: pre-trained checkpoint
+- work_dir: results folder for log and ckpt
+- num_epochs: number of epoches
+- batch_size: batch size for training
+- num_workers: the num_workers
+- lr: learning rate for training
+- lr_scheduler: the choices of scheduler, default is multisteplr
+- 
+💡**Note**: Use the `--checkpoint` to set the pre-trained weight path, if no checkpoint is found in the specified path, the model will undergo training from scratch.
+
+3. Evaluation
+Prepare your own test dataset and refer to the samples in `M-SAM/demo` to replace them according to your specific scenario. The target file structures should be like the following:
+> ```
+> data/test
+>       ├── adrenal
+>       │ ├── ct_WORD
+>       │ │ ├── imagesTr
+>       │ │ │ ├── word_0027.nii.gz
+>       │ │ │ ├── ...
+>       │ │ ├── labelsTr
+>       │ │ │ ├── word_0027.nii.gz
+>       │ │ │ ├── ...
+>       ├── liver
+>       │ ├── ct_WORD
+>       │ │ ├── imagesTr
+>       │ │ │ ├── word_0029.nii.gz
+>       │ │ │ ├── ...
+>       │ │ ├── labelsTr
+>       │ │ │ ├── word_0029.nii.gz
+>       │ │ │ ├── ...
+>       ├── ...
+> ```
+And
+```bash
+cd ./M-SAM
+python test_msam.py
+```
+This will start the testing process of the M-SAM model on your prepared data.
+
+## 📧 Citation
+```
+@article{shi2024mask,
+  title={Mask-Enhanced Segment Anything Model for Tumor Lesion Semantic Segmentation},
+  author={Shi, Hairong and Han, Songhao and Huang, Shaofei and Liao, Yue and Li, Guanbin and Kong, Xiangxing and Zhu, Hua and Wang, Xiaomu and Liu, Si},
+  journal={arXiv preprint arXiv:2403.05912},
+  year={2024}
+}
+```
+## 🤝 Acknowledgement
+- We thank all the open-source of the following projects:
+  - [Segment Anything](https://github.com/facebookresearch/segment-anything) &#8194;
+  - [SAM-Med3D](https://github.com/OpenGVLab/SAM-Med3D/tree/main)
+  - 
+## 📚 License
+This project is released under the [Apache 2.0 license](LICENSE). 
+
