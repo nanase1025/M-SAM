@@ -27,22 +27,20 @@ Then download [SAM checkpoint](https://drive.google.com/file/d/1MuqYRQKIZb4YPtEr
 1. Prepare your own train dataset and refer to the samples in `M-SAM/demo` to replace them according to your specific scenario. The target file structures should be like the following:
 > ```
 > data/train
->       ├── adrenal
->       │ ├── ct_WORD
->       │ │ ├── imagesTr
->       │ │ │ ├── word_0025.nii.gz
->       │ │ │ ├── ...
->       │ │ ├── labelsTr
->       │ │ │ ├── word_0025.nii.gz
->       │ │ │ ├── ...
->       ├── liver
->       │ ├── ct_WORD
->       │ │ ├── imagesTr
->       │ │ │ ├── word_0025.nii.gz
->       │ │ │ ├── ...
->       │ │ ├── labelsTr
->       │ │ │ ├── word_0025.nii.gz
->       │ │ │ ├── ...
+>       ├── ct_BraTS
+>       │ ├── imagesTr
+>       │ │ ├── word_0025.nii.gz
+>       │ │ ├── ...
+>       │ ├── labelsTr
+>       │ │ ├── word_0025.nii.gz
+>       │ │ ├── ...
+>       │ ── ct_LiTS
+>       │ ├── imagesTr
+>       │ │ ├── word_0025.nii.gz
+>       │ │ ├── ...
+>       │ ├── labelsTr
+>       │ │ ├── word_0025.nii.gz
+>       │ │ ├── ...
 >       ├── ...
 > ```
 2. Start Training!
