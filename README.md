@@ -10,3 +10,6 @@ We introduce Mask-Enhanced SAM (M-SAM), an innovative architecture tailored for 
 -  We propose a Mask-Enhanced Adapter (MEA) to align the positional information of the prompt with the semantic information of the input image, optimizing precise guidance for mask prediction. Based on the design of the MEA, we further implement an iterative refining scheme to refine masks, yielding improved performances.
 - With updates to only about 20% of the parameters, our model outperforms state-of-the-art medical image segmentation methods on five tumor lesion segmentation benchmarks. Additionally, we validate the effectiveness of our method in domain transferring.
 
+## 👉 A Quick Overview
+
+
