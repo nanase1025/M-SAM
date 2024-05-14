@@ -61,7 +61,7 @@ The key options are listed below:
 - num_workers: the num_workers
 - lr: learning rate for training
 - lr_scheduler: the choices of scheduler, default is multisteplr
-- 
+
 💡**Note**: Use the `--checkpoint` to set the pre-trained weight path, if no checkpoint is found in the specified path, the model will undergo training from scratch.
 
 3. Evaluation
@@ -106,7 +106,7 @@ This will start the testing process of the M-SAM model on your prepared data.
 - We thank all the open-source of the following projects:
   - [Segment Anything](https://github.com/facebookresearch/segment-anything) &#8194;
   - [SAM-Med3D](https://github.com/OpenGVLab/SAM-Med3D/tree/main)
-  - 
+    
 ## 📚 License
 This project is released under the [Apache 2.0 license](LICENSE). 
 
