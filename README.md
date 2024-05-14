@@ -11,5 +11,14 @@ We introduce Mask-Enhanced SAM (M-SAM), an innovative architecture tailored for 
 - With updates to only about 20% of the parameters, our model outperforms state-of-the-art medical image segmentation methods on five tumor lesion segmentation benchmarks. Additionally, we validate the effectiveness of our method in domain transferring.
 
 ## 👉 A Quick Overview
+M-SAM consists of multiple stages of iterative refinement, which makes it possible to refine the predicted segmentation masks iteratively, thus obtaining more accurate segmentation boundaries progressively.
+<p align="center"><img width="800" alt="image" src="https://github.com/nanase1025/M-SAM/blob/main/assets/architecture.jpg"></p> 
+Our MEA is proposed to aggregate the image embedding with corresponding mask, so that the updated image embedding can perceive position priors of the lesion regions.
+<p align="center"><img width="800" alt="image" src="https://github.com/nanase1025/M-SAM/blob/main/assets/MEA.jpg"></p> 
 
-
+## 👉 Requirement
+ Install the environment:
+ ```bash
+pip install -r requirements.txt
+```
+Then download [SAM checkpoint](https://drive.google.com/file/d/1MuqYRQKIZb4YPtEraK8zTKKpp-dUQIR9/view), and put it at .work_dir/SAM/
