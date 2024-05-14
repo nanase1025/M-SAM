@@ -105,7 +105,7 @@ This will start the testing process of the M-SAM model on your prepared data.
 ## 🤝 Acknowledgement
 - We thank all the open-source of the following projects:
   - [Segment Anything](https://github.com/facebookresearch/segment-anything) &#8194;
-  - [SAM-Med3D](https://github.com/OpenGVLab/SAM-Med3D/tree/main)
+  - [SAM-Med3D](https://github.com/uni-medical/SAM-Med3D)
     
 ## 📚 License
 This project is released under the [Apache 2.0 license](LICENSE). 
