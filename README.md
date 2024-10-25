@@ -93,11 +93,13 @@ This will start the testing process of the M-SAM model on your prepared data.
 
 ## 📧 Citation
 ```
-@article{shi2024mask,
-  title={Mask-Enhanced Segment Anything Model for Tumor Lesion Semantic Segmentation},
+@inproceedings{shi2024mask,
+  title={Mask-enhanced segment anything model for tumor lesion semantic segmentation},
   author={Shi, Hairong and Han, Songhao and Huang, Shaofei and Liao, Yue and Li, Guanbin and Kong, Xiangxing and Zhu, Hua and Wang, Xiaomu and Liu, Si},
-  journal={arXiv preprint arXiv:2403.05912},
-  year={2024}
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={403--413},
+  year={2024},
+  organization={Springer}
 }
 ```
 ## 🤝 Acknowledgement
